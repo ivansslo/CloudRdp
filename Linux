@@ -1,0 +1,151 @@
+#!/bin/bash
+echo ""
+echo
+clear
+echo ""
+
+
+php="$(ps -efw | grep php | grep -v grep | awk '{print $2}')"
+ngrok="$(ps -efw | grep ngrok | grep -v grep | awk '{print $2}')"
+kill -9 $php
+kill -9 $ngrok
+clear
+rm -rf Docker-Ubuntu/nomachine-mate.sh
+rm -rf Docker-Ubuntu/nomachine-windows10.sh
+rm -rf Docker-Ubuntu/nomachine-windows10.sh
+rm -rf Docker-Ubuntu/nomachine-wine.sh
+rm -rf RDP/Debian-Linux-ChomeDesktop.sh
+rm -rf RDP/ubuntu-desktop-lxde-vnc.sh
+rm -rf Docker-Ubuntu/nomachine-xfce4.sh
+rm -rf RDP/kali-linux.sh
+rm -rf Docker-Ubuntu/nomachine-kalilinux.sh
+clear
+bash OnlineHacKing/0.sh
+rm -rf RDP.sh
+clear
+bash OnlineHacKing/1.sh
+clear
+bash OnlineHacKing/Logo.sh
+bash OnlineHacKing/Logo2.sh
+
+                 echo -e $''   
+                 read -p $'\e[1;91m[\e[0m\e[1;91m *** \e[0m\e[1;96m]\e[0m\e[1;92m  You Want to Linux Desktop Option  \e[1;91m  > : \e[0m' option
+		 echo -e
+                 echo ""
+		 
+		 if [ $option = 01 ] || [ $option = 1 ]
+                 then 
+                           
+			   echo ""
+                           clear
+			   bash KaliLinux.sh
+			   echo ""
+			   exit
+			   
+
+
+
+
+	          break;
+		  
+                  elif [ $option = 02 ] || [ $option = 2 ]
+	          then
+	                          
+                           echo ""
+			   clear
+			   bash Docker-Ubuntu/nomachine-mate.sh
+			   echo ""
+			   exit
+			   
+			   
+			   
+			   
+			   
+                          break;
+		  
+                  elif [ $option = 03 ] || [ $option = 3 ]
+	          then
+	                          
+                           echo ""
+			   clear
+			   bash Docker-Ubuntu/nomachine-windows10.sh
+			   echo ""
+			   exit
+                           
+
+  
+			   
+                          break;
+		  
+                  elif [ $option = 04 ] || [ $option = 4 ]
+	          then
+	                          
+                           echo ""
+			   clear
+			   bash Docker-Ubuntu/nomachine-wine.sh
+			   echo ""
+			   exit
+                           
+
+  
+			   
+                          break;
+		  
+                  elif [ $option = 05 ] || [ $option = 5 ]
+	          then
+	                          
+                           echo ""
+			   clear
+			   bash RDP/Debian-Linux-ChomeDesktop.sh
+			   echo ""
+			   exit
+                           
+
+  
+			   
+                          break;
+		  
+                  elif [ $option = 06 ] || [ $option = 6 ]
+	          then
+	                          
+                           echo ""
+			   clear
+			   bash RDP/ubuntu-desktop-lxde-vnc.sh
+			   echo ""
+			   exit
+                           
+
+  
+			   
+                          break;
+		  
+                  elif [ $option = 07 ] || [ $option = 7 ]
+	          then
+	                          
+                           echo ""
+			   clear
+			   bash Docker-Ubuntu/nomachine-xfce4.sh
+			   echo ""
+			   exit
+                           
+
+
+                  
+			   
+
+                   break;		  
+
+                elif [ $option = 99 ]
+	        then     
+	                 echo
+       	                 exit 
+		break;
+		      
+                else 
+		  
+		         echo
+		         echo -e "\e[92m[\e[94m!\e[92m]\e[92m Invalid option Try Again !! \e[m "
+		         sleep 2
+                         exit
+		         fi
+                         done
